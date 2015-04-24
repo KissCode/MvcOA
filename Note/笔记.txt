@@ -1,0 +1,30 @@
+WebClient
+WebRequest
+
+隐式类型 var 编译阶段将var关键字编译为实际的类型，在运行阶段以实际类型运行
+dynamic  ?
+对象初始化器 集合初始化器
+匿名类
+扩展方法
+Lambda表达式本质就是一个匿名函数
+
+ADO.NET 基于.Net平台的一组操作数据库的API	(...)
+
+ORM 关系型数据库表的变化映射到实体变化
+
+EF操作数据库时，VS2010与VS2012的区别
+{
+		var info = new ClassInfo();
+		
+2010:	var context = new ObjectContext(); 
+		context.ClassInfo.Attach(info);
+		context.ObjectStateManager.ChangeObjectState(info,EntytiState.Added);
+2012:	var context = new DbContext();
+		context.ClassInfo.Attach(info);
+		context.Enty().State = EntytiState.Added;
+		
+		context.SaveChange();
+}
+
+Micro ORM:	Dapper
+FetalPOCO: ORM
